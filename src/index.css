@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html[data-theme="default"] {
+    --color-primary: 4 13 18;
+    --color-secondary: 24 61 61;
+    --color-third: 92 131 116;
+    --color-accent: 147 177 166;
+  }
+  html[data-theme="dark"] {
+    --color-primary: 4 13 18;
+    --color-secondary: 24 61 61;
+    --color-accent: 92 131 116;
+  }
+
+  html[data-theme="winter"] {
+    --color-primary: 22 72 99;
+    --color-secondary: 66 125 157;
+    --color-third: 155 190 200;
+    --color-accent: 221 242 253;
+  }
+
+  html[data-theme="christmas"] {
+    --color-primary: 194 16 16;
+    --color-secondary: 230 72 72;
+    --color-third: 255 253 227;
+    --color-accent: 207 232 169;
+  }
+}
+
+:root {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.15s;
+  animation-fill-mode: ease-in-out;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.25s;
+  animation-fill-mode: ease-in-out;
+}
