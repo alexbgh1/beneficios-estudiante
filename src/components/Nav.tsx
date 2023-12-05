@@ -3,7 +3,7 @@ import SwitchLightDark from "./theme/SwitchTheme";
 import { GithubIcon } from "../components/icons";
 const Nav = () => {
   return (
-    <header className="px-8 py-4 flex justify-between items-center h-16 bg-secondary text-white relative shadow-sm">
+    <header className="px-8 py-4 flex justify-between items-center h-14 bg-secondary text-white relative shadow-sm">
       <NavLeft />
       <NavRight />
     </header>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Github",
+    "details": {
+      "description": "",
+      "url": "",
+      "logo": "",
+      "aliases": ["github"]
+    },
+    "testing": {
+      "status": "passed",
+      "last_tested_date": "2023-12-05"
+    },
+    "limits": {
+      "max_time_benefit": {
+        "type": "student",
+        "duration": {
+          "value": 1,
+          "unit": "year"
+        }
+      },
+      "credits": null
+    }
+  }
+]
