@@ -1,5 +1,3 @@
-import React from "react";
-
 const Hero = () => {
   return (
     <section className="bg-primary bg-[url('../images/hero/bg-grid.png')]">

@@ -15,7 +15,6 @@ const NavLeft = (): JSX.Element => (
   <section className="w-1/4 flex justify-start items-center">
     <a href="/" className="flex items-center">
       <img src="/logo.svg" alt="Logo" className="h-8 w-8 mr-2" />
-      <h1 className="text-2xl">My App</h1>
     </a>
   </section>
 );

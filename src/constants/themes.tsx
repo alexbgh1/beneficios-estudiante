@@ -6,11 +6,11 @@ const themes = [
     name: "Light",
     value: "light",
   },
-  // {
-  //   id: 2,
-  //   name: "Dark",
-  //   value: "dark",
-  // },
+  {
+    id: 2,
+    name: "Dark",
+    value: "dark",
+  },
   {
     id: 3,
     name: "Winter",
