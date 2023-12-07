@@ -34,4 +34,9 @@ const resolveLimitsIcon = (type: BenefitLimitMaxTimeType, className: string): Re
   }
 };
 
-export { resolveTestedIcon, resolveLimitsIcon };
+const resolveRenewalIcon = (renewal: boolean, className: string): React.ReactNode => {
+  if (renewal) return <RepeatIcon className={`fill-gray-500 ${className}`} />;
+  return null;
+};
+
+export { resolveTestedIcon, resolveLimitsIcon, resolveRenewalIcon };

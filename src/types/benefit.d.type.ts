@@ -1,6 +1,6 @@
 type Tested = "passed" | "not-passed" | "unknown";
 type BenefitLimitMaxTimeType = "student" | "fixed" | "unknown";
-type BenefitLimitCreditsType = "hours" | "credits" | "unknown";
+type BenefitLimitCreditsType = "hours" | "credits" | "unknown" | null;
 type DurationUnit = "days" | "months" | "years";
 
 // Estado de la prueba del beneficio, si sigue o no disponible el beneficio
@@ -24,9 +24,10 @@ interface BenefitLimits {
   max_time_benefit: {
     type: BenefitLimitMaxTimeType;
     duration: {
-      value: number;
+      value: number | null;
       unit: DurationUnit;
     };
+    renewal: boolean;
   };
   credits: {
     type: BenefitLimitCreditsType;

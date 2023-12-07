@@ -5,7 +5,7 @@
     "details": {
       "description": "Ofrece acceso gratuito a herramientas como Github Pages, Github Copilot y está vinculado a otros servicios.",
       "url": "https://education.github.com/pack",
-      "logo": "",
+      "logo": "/images/benefits/logo_github.png",
       "aliases": ["github", "programming"]
     },
     "testing": {
@@ -15,6 +15,7 @@
     "limits": {
       "max_time_benefit": {
         "type": "student",
+        "renewal": true,
         "duration": {
           "value": 1,
           "unit": "years"

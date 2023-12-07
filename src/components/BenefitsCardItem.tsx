@@ -1,13 +1,15 @@
 // Types
 import { Benefit, BenefitDetails, BenefitTesting, BenefitLimits } from "../types/benefit.d.type";
-import { resolveTestedIcon, resolveLimitsIcon } from "../utils/resolveIcons";
+// Utils
+import { resolveTestedIcon, resolveLimitsIcon, resolveRenewalIcon } from "../utils/resolveIcons";
 import { resolveTimeNumberDate } from "../utils/resolveTime.tsx";
+// Components
 import { GoToLinkIcon } from "./icons";
 const BenefitsCardItem = ({ benefit }: { benefit: Benefit }) => {
   const { name, details, testing, limits } = benefit;
 
   return (
-    <article className="bg-third/30 w-80 border border-gray-200 rounded-md shadow-sm">
+    <article className="bg-third/30 w-80 border border-gray-300 rounded-md shadow-sm">
       {/* Header */}
       <BenefitsCardItemHeader name={name} details={details} testing={testing} />
       {/* Body */}
@@ -21,14 +23,17 @@ const BenefitsCardItem = ({ benefit }: { benefit: Benefit }) => {
 const BenefitsCardItemFooter = ({ limits }: { limits: BenefitLimits }) => {
   const { max_time_benefit } = limits;
   const limitsIcon = resolveLimitsIcon(max_time_benefit.type, "w-5 h-5 fill-gray-500");
+  const renewalIcon = resolveRenewalIcon(max_time_benefit.renewal, "ml-2 w-5 h-5 fill-gray-500");
   return (
     <footer className="px-2 py-2">
       <h4 className="px-2 text-sm font-bold text-gray-800">Límites</h4>
       <ul className="flex flex-row justify-between px-2 py-2">
         <li className="flex items-center gap-2">
           {limitsIcon}
-          <span className="text-sm text-gray-700 capitalize">{max_time_benefit.type}</span>
-          <span className="text-sm text-gray-700 capitalize">
+          <span className="text-xs text-gray-700 capitalize">{max_time_benefit.type}</span>
+          {/* Renewal: boolean */}
+          {max_time_benefit.renewal && renewalIcon}
+          <span className="text-xs text-gray-700 capitalize">
             {max_time_benefit.duration.value}{" "}
             {resolveTimeNumberDate(max_time_benefit.duration.value, max_time_benefit.duration.unit)}
           </span>
@@ -64,8 +69,9 @@ const BenefitsCardItemHeader = ({
 }) => {
   const isTestedIcon = resolveTestedIcon(testing.status, "w-5 h-5");
   return (
-    <header className="flex justify-between items-strech px-4 py-2">
+    <header className={`flex justify-between items-strech px-4 py-2 bg-[url(${details.logo})] bg-cover bg-center`}>
       <section className="w-full flex items-baseline">
+        {/* <img src={details.logo} alt={name} className="w-10 h-10 rounded-full" /> */}
         <a
           href={details.url}
           target="_blank"
