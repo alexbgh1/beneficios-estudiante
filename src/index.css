@@ -32,6 +32,11 @@
     --color-accent: 207 232 169;
     --text-primary: 255 255 255;
   }
+
+  ::selection {
+    background-color: rgb(var(--color-accent));
+    color: rgb(var(--color-secondary));
+  }
 }
 
 :root {

@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Github",
     "details": {
-      "description": "",
-      "url": "",
+      "description": "Ofrece acceso gratuito a herramientas como Github Pages, Github Copilot y está vinculado a otros servicios.",
+      "url": "https://education.github.com/pack",
       "logo": "",
       "aliases": ["github", "programming"]
     },
@@ -17,10 +17,13 @@
         "type": "student",
         "duration": {
           "value": 1,
-          "unit": "year"
+          "unit": "years"
         }
       },
-      "credits": null
+      "credits": {
+        "type": null,
+        "value": null
+      }
     }
   }
 ]
