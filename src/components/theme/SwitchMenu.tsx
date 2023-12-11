@@ -13,14 +13,14 @@ const SwitchMenu = ({
 }) => {
   return (
     <ul
-      className={`mt-3 bg-white absolute z-50 top-full right-0 w-36 py-1 rounded-md shadow-sm border border-gray-200 text-gray-800 transition duration-150 ease-in-out fadeIn ${
+      className={`mt-3 bg-secondary absolute z-50 top-full right-0 w-36 py-1 rounded-md shadow-sm border border-accent/50 text-gray-800 transition duration-150 ease-in-out fadeIn ${
         menu ? "" : "hidden"
       }`}
     >
       {themes.map((theme) => (
-        <li key={theme.id} className={`${currentActiveTheme === theme.value ? "text-primary" : ""}  `}>
+        <li key={theme.id} className={`${currentActiveTheme === theme.value ? "text-primary" : ""}`}>
           <button
-            className="flex flext-start items-center gap-3 w-full px-4 py-2 hover:bg-accent cursor-pointer"
+            className=" text-accent/75 flex flext-start items-center gap-3 w-full px-4 py-2 hover:bg-accent/25 cursor-pointer"
             onClick={() => handleChangeTheme(theme.value)}
           >
             {theme.value &&
@@ -28,11 +28,11 @@ const SwitchMenu = ({
                 /* props adicionales aquí */
                 className: `${
                   currentActiveTheme === theme.value
-                    ? "h-5 w-5 inline-block text-white fill-primary"
-                    : "h-5 w-5 inline-block"
+                    ? "h-5 w-5 inline-block fill-accent"
+                    : "h-5 w-5 inline-block fill-accent/60"
                 }`,
               })}
-            {theme.name}
+            <span className={`text-sm ${currentActiveTheme === theme.value ? "text-accent" : ""}`}>{theme.name}</span>
           </button>
         </li>
       ))}

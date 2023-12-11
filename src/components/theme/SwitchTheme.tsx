@@ -16,7 +16,10 @@ const SwitchTheme = () => {
 
   return (
     <div>
-      <button onClick={handleClick}>
+      <button
+        onClick={handleClick}
+        className="block p-1.5 rounded-full hover:bg-accent/25 transition duration-150 ease-in-out"
+      >
         {cloneElement(themeIcons[currentActiveTheme], {
           /* props adicionales aquí */
           className: "h-6 w-6 inline-block fill-accent",

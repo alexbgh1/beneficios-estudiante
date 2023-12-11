@@ -4,17 +4,20 @@
 
 @layer base {
   html[data-theme="light"] {
-    --color-primary: 4 13 18;
-    --color-secondary: 92 131 116;
-    --color-third: 92 131 116;
-    --color-accent: 147 177 166;
-    --text-primary: 255 255 255;
+    --color-primary: 243 238 234;
+    --color-secondary: 235 227 213;
+    --color-third: 176 166 149;
+    --color-accent: 119 107 93;
+    --text-title: 37 37 37;
+    --text-primary: 37 37 37;
   }
   html[data-theme="dark"] {
     --color-primary: 4 13 18;
     --color-secondary: 24 61 61;
     --color-third: 147 177 166;
     --color-accent: 92 131 116;
+    --text-primary: 128 128 128;
+    --text-title: 37 37 37;
   }
 
   html[data-theme="winter"] {
@@ -23,6 +26,7 @@
     --color-third: 155 190 200;
     --color-accent: 221 242 253;
     --text-primary: 255 255 255;
+    --text-title: 37 37 37;
   }
 
   html[data-theme="christmas"] {
@@ -31,6 +35,7 @@
     --color-third: 255 253 227;
     --color-accent: 207 232 169;
     --text-primary: 255 255 255;
+    --text-title: 37 37 37;
   }
 
   ::selection {

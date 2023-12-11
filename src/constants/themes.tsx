@@ -6,21 +6,21 @@ const themes = [
     name: "Light",
     value: "light",
   },
-  {
-    id: 2,
-    name: "Dark",
-    value: "dark",
-  },
+  // {
+  //   id: 2,
+  //   name: "Dark",
+  //   value: "dark",
+  // },
   {
     id: 3,
     name: "Winter",
     value: "winter",
   },
-  {
-    id: 4,
-    name: "Christmas",
-    value: "christmas",
-  },
+  // {
+  //   id: 4,
+  //   name: "Christmas",
+  //   value: "christmas",
+  // },
 ];
 
 // Mapeo entre los valores de los temas y los componentes de iconos
