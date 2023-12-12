@@ -5,7 +5,7 @@
     "details": {
       "description": "Ofrece acceso gratuito a herramientas como Github Pages, Github Copilot y está vinculado a otros servicios.",
       "url": "https://education.github.com/pack",
-      "logo": "/images/benefits/logo_github.png",
+      "logo": "/images/benefits/logo-github.png",
       "aliases": ["github", "programming"]
     },
     "testing": {
@@ -24,6 +24,34 @@
       "credits": {
         "type": null,
         "value": null
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Azure",
+    "details": {
+      "description": "Ofrece acceso gratuito a herramientas como Azure.",
+      "url": "https://azure.microsoft.com/es-es/free/students/",
+      "logo": "/images/benefits/logo-azure.png",
+      "aliases": ["azure", "microsoft"]
+    },
+    "testing": {
+      "status": "passed",
+      "last_tested_date": "2023-12-11"
+    },
+    "limits": {
+      "max_time_benefit": {
+        "type": "student",
+        "renewal": true,
+        "duration": {
+          "value": 1,
+          "unit": "years"
+        }
+      },
+      "credits": {
+        "type": "credits",
+        "value": 100
       }
     }
   }

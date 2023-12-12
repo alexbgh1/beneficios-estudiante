@@ -5,11 +5,12 @@ import { resolveTestedIcon, resolveLimitsIcon, resolveRenewalIcon } from "../uti
 import { resolveTimeNumberDate } from "../utils/resolveTime.tsx";
 // Components
 import { GoToLinkIcon } from "./icons";
+
 const BenefitsCardItem = ({ benefit }: { benefit: Benefit }) => {
   const { name, details, testing, limits } = benefit;
 
   return (
-    <article className="bg-third/30 w-80 border border-gray-300 rounded-md shadow-sm">
+    <article className="bg-third/40 w-80 border border-gray-300 rounded-md shadow-sm">
       {/* Header */}
       <BenefitsCardItemHeader name={name} details={details} testing={testing} />
       {/* Body */}
@@ -24,28 +25,37 @@ const BenefitsCardItemFooter = ({ limits }: { limits: BenefitLimits }) => {
   const { max_time_benefit } = limits;
   const limitsIcon = resolveLimitsIcon(max_time_benefit.type, "w-5 h-5 fill-gray-500");
   const renewalIcon = resolveRenewalIcon(max_time_benefit.renewal, "ml-2 w-5 h-5 fill-gray-500");
-  return (
-    <footer className="px-2 py-2">
-      <h4 className="px-2 text-sm font-bold text-gray-800">Límites</h4>
-      <ul className="flex flex-row justify-between px-2 py-2">
-        <li className="flex items-center gap-2">
-          {limitsIcon}
-          <span className="text-xs text-gray-700 capitalize">{max_time_benefit.type}</span>
-          {/* Renewal: boolean */}
-          {max_time_benefit.renewal && renewalIcon}
-          <span className="text-xs text-gray-700 capitalize">
-            {max_time_benefit.duration.value}{" "}
-            {resolveTimeNumberDate(max_time_benefit.duration.value, max_time_benefit.duration.unit)}
-          </span>
-        </li>
 
-        {/* // TODO: Credits */}
-        {/* {credits.type && (
+  return (
+    <footer className="flex justify-between px-2 py-2">
+      <section>
+        <h4 className="px-2 text-sm font-bold text-gray-800">Límites</h4>
+        <ul className="flex flex-row justify-between px-2 py-2">
           <li className="flex items-center gap-2">
-            <span className="text-sm text-gray-700">${credits.type}</span>
+            {limitsIcon}
+            <span className="text-xs text-gray-700 capitalize">{max_time_benefit.type}</span>
+            {/* Renewal: boolean */}
+            {max_time_benefit.renewal && renewalIcon}
+            <span className="text-xs text-gray-700 capitalize">
+              {max_time_benefit.duration.value}{" "}
+              {resolveTimeNumberDate(max_time_benefit.duration.value, max_time_benefit.duration.unit)}
+            </span>
           </li>
-        )} */}
-      </ul>
+        </ul>
+      </section>
+      {/* // TODO: Credits */}
+      <section>
+        {limits.credits.type && (
+          <h4 className="capitalize px-2 text-sm font-bold text-gray-800">{limits.credits.type}</h4>
+        )}
+        <ul className="flex flex-row justify-between px-2 py-2">
+          {limits.credits.type && (
+            <li className="flex flex-col items-center gap-2">
+              <span className="text-sm text-gray-700">${limits.credits.value}</span>
+            </li>
+          )}
+        </ul>
+      </section>
     </footer>
   );
 };
@@ -69,7 +79,7 @@ const BenefitsCardItemHeader = ({
 }) => {
   const isTestedIcon = resolveTestedIcon(testing.status, "w-5 h-5");
   return (
-    <header className={`flex justify-between items-strech px-4 py-2 bg-[url(${details.logo})] bg-cover bg-center`}>
+    <header className={`bg-[length:16px_16px] bg-no-repeat flex justify-between items-strech px-4 py-2`}>
       <section className="w-full flex items-baseline">
         {/* <img src={details.logo} alt={name} className="w-10 h-10 rounded-full" /> */}
         <a

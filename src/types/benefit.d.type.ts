@@ -1,5 +1,5 @@
 type Tested = "passed" | "not-passed" | "unknown";
-type BenefitLimitMaxTimeType = "student" | "fixed" | "unknown";
+type BenefitLimitMaxTimeType = "student" | "fixed" | "unknown" | null;
 type BenefitLimitCreditsType = "hours" | "credits" | "unknown" | null;
 type DurationUnit = "days" | "months" | "years";
 
