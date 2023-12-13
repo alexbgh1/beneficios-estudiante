@@ -1,4 +1,3 @@
-import "./App.css";
 import Nav from "./components/Nav";
 import Body from "./components/Body";
 import DevPalette from "./components/DevPalette";

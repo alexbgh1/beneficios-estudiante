@@ -3,13 +3,13 @@ import { useState, useEffect } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 const useTheme = () => {
-  const currentTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  const currentTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "coffee";
   const [theme, setTheme] = useLocalStorage<string>("data-theme", currentTheme);
   const [currentActiveTheme, setCurrentActiveTheme] = useState<string>(theme);
   const activeTheme = (theme: string) => {
     switch (theme) {
-      case "christmas":
-        return "christmas";
+      case "coffee":
+        return "coffee";
       case "winter":
         return "winter";
       case "dark":
@@ -17,7 +17,7 @@ const useTheme = () => {
       case "light":
         return "light";
       default:
-        return "light";
+        return "coffee";
     }
   };
 
