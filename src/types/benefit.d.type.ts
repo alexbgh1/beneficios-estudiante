@@ -3,6 +3,16 @@ type BenefitLimitMaxTimeType = "student" | "fixed" | "unknown" | null;
 type BenefitLimitCreditsType = "hours" | "credits" | "unknown" | null;
 type DurationUnit = "days" | "months" | "years";
 
+interface BenefitDetailsLogo {
+  png: string;
+  webp: string;
+}
+
+interface BenefitDetailsAliases {
+  alias: string;
+  bg_color: string;
+}
+
 // Estado de la prueba del beneficio, si sigue o no disponible el beneficio
 interface BenefitTesting {
   status: Tested;
@@ -13,8 +23,8 @@ interface BenefitTesting {
 interface BenefitDetails {
   description: string;
   url: string;
-  logo: string;
-  aliases: string[]; // -> para búsqueda
+  logo: BenefitDetailsLogo;
+  aliases: BenefitDetailsAliases[]; // -> para búsqueda
 }
 
 // Duración del beneficio, ejemplo:

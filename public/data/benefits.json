@@ -5,8 +5,16 @@
     "details": {
       "description": "Ofrece acceso gratuito a herramientas como Github Pages, Github Copilot y está vinculado a otros servicios.",
       "url": "https://education.github.com/pack",
-      "logo": "/images/benefits/logo-github.png",
-      "aliases": ["programming"]
+      "logo": {
+        "png": "/images/benefits/logo-github.png",
+        "webp": "/images/benefits/logo-github.webp"
+      },
+      "aliases": [
+        {
+          "alias": "programming",
+          "bg": "#24292E"
+        }
+      ]
     },
     "testing": {
       "status": "passed",
@@ -33,8 +41,20 @@
     "details": {
       "description": "Ofrece créditos para servicios como Azure Cloud.",
       "url": "https://azure.microsoft.com/es-es/free/students/",
-      "logo": "/images/benefits/logo-azure.png",
-      "aliases": ["cloud", "programming"]
+      "logo": {
+        "png": "/images/benefits/logo-azure.png",
+        "webp": "/images/benefits/logo-azure.webp"
+      },
+      "aliases": [
+        {
+          "alias": "cloud",
+          "bg": "#0078D4"
+        },
+        {
+          "alias": "programming",
+          "bg": "#24292E"
+        }
+      ]
     },
     "testing": {
       "status": "passed",
@@ -61,8 +81,16 @@
     "details": {
       "description": "Ofrece acceso gratuito a herramientas de Microsoft: Word, Excel, PowerPoint, etc.",
       "url": "https://www.microsoft.com/es-es/education/products/office",
-      "logo": "/images/benefits/logo-microsoft.png",
-      "aliases": ["office"]
+      "logo": {
+        "png": "/images/benefits/logo-microsoft.png",
+        "webp": "/images/benefits/logo-microsoft.webp"
+      },
+      "aliases": [
+        {
+          "alias": "office",
+          "bg": "#D83B01"
+        }
+      ]
     },
     "testing": {
       "status": "passed",
@@ -74,6 +102,78 @@
         "renewal": true,
         "duration": {
           "value": 1,
+          "unit": "years"
+        }
+      },
+      "credits": {
+        "type": null,
+        "value": null
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Figma",
+    "details": {
+      "description": "Ofrece acceso a más herramientas de diseño dentro de la aplicación.",
+      "url": "https://www.figma.com/education/",
+      "logo": {
+        "png": "/images/benefits/logo-figma.png",
+        "webp": "/images/benefits/logo-figma.webp"
+      },
+      "aliases": [
+        {
+          "alias": "design",
+          "bg": "#F24E1E"
+        }
+      ]
+    },
+    "testing": {
+      "status": "passed",
+      "last_tested_date": "2023-12-13"
+    },
+    "limits": {
+      "max_time_benefit": {
+        "type": "student",
+        "renewal": true,
+        "duration": {
+          "value": 4,
+          "unit": "years"
+        }
+      },
+      "credits": {
+        "type": null,
+        "value": null
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Miro",
+    "details": {
+      "description": "Ofrece acceso a más herramientas de diseño dentro de la aplicación.",
+      "url": "https://help.miro.com/hc/es/articles/360017730473-Plan-Education",
+      "logo": {
+        "png": "/images/benefits/logo-miro.png",
+        "webp": "/images/benefits/logo-miro.webp"
+      },
+      "aliases": [
+        {
+          "alias": "design",
+          "bg": "#F24E1E"
+        }
+      ]
+    },
+    "testing": {
+      "status": "passed",
+      "last_tested_date": "2023-12-13"
+    },
+    "limits": {
+      "max_time_benefit": {
+        "type": "student",
+        "renewal": true,
+        "duration": {
+          "value": 2,
           "unit": "years"
         }
       },

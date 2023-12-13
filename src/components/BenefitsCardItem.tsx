@@ -10,7 +10,7 @@ const BenefitsCardItem = ({ benefit }: { benefit: Benefit }) => {
   const { name, details, testing, limits } = benefit;
 
   return (
-    <article className="before:w-full mx-4 min-w-[240px] max-w-[350px] before:h-full before:absolute before:z-[-1] before:opacity-50 before:transition-all before:duration-300 before:transform before:hover:transform before:hover:skew-y-[1deg] before:hover:scale-105 before:hover:shadow-md before:hover:border-gray-400 before:bg-third/40 before:border before:border-gray-300 before:rounded-md before:shadow-sm bg-opacity-50 transition-all duration-300 transform hover:transform hover:skew-y-[1deg] hover:scale-105 hover:shadow-md hover:border-gray-400 bg-third/40 border border-gray-300 rounded-md shadow-sm">
+    <article className="before:w-full  min-w-[240px] max-w-[350px] before:h-full before:absolute before:z-[-1] before:opacity-50 before:transition-all before:duration-300 before:transform before:hover:transform before:hover:skew-y-[1deg] before:hover:scale-105 before:hover:shadow-md before:hover:border-gray-400 before:bg-third/40 before:border before:border-gray-300 before:rounded-md before:shadow-sm bg-opacity-50 transition-all duration-300 transform hover:transform hover:skew-y-[1deg] hover:scale-105 hover:shadow-md hover:border-gray-400 bg-third/40 border border-gray-300 rounded-md shadow-sm">
       {/* Header */}
       <BenefitsCardItemHeader name={name} details={details} />
       {/* Body */}
@@ -32,9 +32,17 @@ const BenefitsCardItemHeader = ({ name, details }: { name: string; details: Bene
           rel="noopener noreferrer"
           className="flex-1 w-4/5 flex flex-row items-start p-2 pl-2"
         >
-          <img src={details.logo} alt={name} className="aspect-square place-self-center mb-1 w-10 h-10" />
+          <picture className="aspect-square place-self-center mb-1 w-10 h-10">
+            <source srcSet={details.logo.webp} type="image/webp" />
+            <source srcSet={details.logo.png} type="image/png" />
+            <img
+              src="/images/benefits/logo-placeholder.png"
+              alt={name}
+              className="aspect-square place-self-center mb-1 w-10 h-10"
+            />
+          </picture>
           <h3 className="ml-2 w-4/5 text-xl sm:text-2xl font-bold text-gray-800 line-clamp-2">{name}</h3>
-          <div className="w-1/5">
+          <div>
             <GoToLinkIcon className="w-5 h-5 inline-block ml-1" />
           </div>
         </a>

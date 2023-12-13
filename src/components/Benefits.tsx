@@ -16,10 +16,12 @@ const Benefits = () => {
   }, []);
 
   return (
-    <div className="w-full mx-8 mt-6 justify-items-center grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] lg:grid-cols-3 gap-6">
-      {benefits.map((benefit) => {
-        return <BenefitsCardItem benefit={benefit} key={benefit.id} />;
-      })}
+    <div className="w-full">
+      <div className="mx-4 sm:mx-8 mt-6 sm:mt-8 justify-items-center grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6">
+        {benefits.map((benefit) => {
+          return <BenefitsCardItem benefit={benefit} key={benefit.id} />;
+        })}
+      </div>
     </div>
   );
 };
