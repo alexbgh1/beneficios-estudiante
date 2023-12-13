@@ -6,7 +6,7 @@
       "description": "Ofrece acceso gratuito a herramientas como Github Pages, Github Copilot y está vinculado a otros servicios.",
       "url": "https://education.github.com/pack",
       "logo": "/images/benefits/logo-github.png",
-      "aliases": ["github", "programming"]
+      "aliases": ["programming"]
     },
     "testing": {
       "status": "passed",
@@ -34,7 +34,7 @@
       "description": "Ofrece acceso gratuito a herramientas como Azure.",
       "url": "https://azure.microsoft.com/es-es/free/students/",
       "logo": "/images/benefits/logo-azure.png",
-      "aliases": ["azure", "microsoft"]
+      "aliases": ["cloud", "programming"]
     },
     "testing": {
       "status": "passed",

@@ -10,7 +10,7 @@ const BenefitsCardItem = ({ benefit }: { benefit: Benefit }) => {
   const { name, details, testing, limits } = benefit;
 
   return (
-    <article className="bg-third/40 w-80 border border-gray-300 rounded-md shadow-sm">
+    <article className=" bg-white bg-opacity-50 transition-all duration-300 transform hover:transform hover:skew-y-[1deg] hover:scale-105 hover:shadow-md hover:border-gray-400 bg-third/40 w-80 border border-gray-300 rounded-md shadow-sm">
       {/* Header */}
       <BenefitsCardItemHeader name={name} details={details} testing={testing} />
       {/* Body */}
@@ -79,24 +79,23 @@ const BenefitsCardItemHeader = ({
 }) => {
   const isTestedIcon = resolveTestedIcon(testing.status, "w-5 h-5");
   return (
-    <header className={`bg-[length:16px_16px] bg-no-repeat flex justify-between items-strech px-4 py-2`}>
-      <section className="w-full flex items-baseline">
-        {/* <img src={details.logo} alt={name} className="w-10 h-10 rounded-full" /> */}
+    <header className={`bg-[length:16px_16px] bg-no-repeat flex justify-between items-strech px-2 py-2`}>
+      <section className="w-full flex items-start justify-between  bg-gradient-to-l from-transparent from-50% to-third/50 to-50% bg-[length:201%_100%] bg-right hover:bg-left  transition-all  duration-300">
         <a
           href={details.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full flex flex-row items-strech p-2 pl-0 bg-gradient-to-l from-transparent from-50% to-third/50 to-50% bg-[length:201%_100%] bg-right hover:bg-left transition-all  duration-300"
+          className="flex-1 w-4/5 flex flex-row items-start p-2 pl-2"
         >
-          <h3 className="w-4/5 text-xl sm:text-2xl font-bold text-gray-800">{name} </h3>
+          <img src={details.logo} alt={name} className="pb-1 max-w-1/5 h-10 rounded-full" />
+          <h3 className="ml-1 w-4/5 text-xl sm:text-2xl font-bold text-gray-800">{name}</h3>
           <div className="w-1/5">
             <GoToLinkIcon className="w-5 h-5 inline-block ml-1" />
           </div>
         </a>
       </section>
-      {/* isTestedIcon */}
       {isTestedIcon && (
-        <div className="p-2">
+        <div className="w-10 p-2">
           <span
             className="block border border-primary/50 hover:border-primary rounded-full p-0.5 transition-all duration-300"
             title={`${testing.status.toUpperCase()} | Última actualización: ${testing.last_tested_date}`}
@@ -105,6 +104,7 @@ const BenefitsCardItemHeader = ({
           </span>
         </div>
       )}
+      {/* isTestedIcon */}
     </header>
   );
 };
