@@ -16,7 +16,7 @@ const Benefits = () => {
   }, []);
 
   return (
-    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="w-full mx-8 mt-6 justify-items-center grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] lg:grid-cols-3 gap-6">
       {benefits.map((benefit) => {
         return <BenefitsCardItem benefit={benefit} key={benefit.id} />;
       })}

@@ -31,7 +31,7 @@
     "id": 2,
     "name": "Microsoft Azure",
     "details": {
-      "description": "Ofrece acceso gratuito a herramientas como Azure.",
+      "description": "Ofrece créditos para servicios como Azure Cloud.",
       "url": "https://azure.microsoft.com/es-es/free/students/",
       "logo": "/images/benefits/logo-azure.png",
       "aliases": ["cloud", "programming"]
@@ -52,6 +52,34 @@
       "credits": {
         "type": "credits",
         "value": 100
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "Microsoft 365",
+    "details": {
+      "description": "Ofrece acceso gratuito a herramientas de Microsoft: Word, Excel, PowerPoint, etc.",
+      "url": "https://www.microsoft.com/es-es/education/products/office",
+      "logo": "/images/benefits/logo-microsoft.png",
+      "aliases": ["office"]
+    },
+    "testing": {
+      "status": "passed",
+      "last_tested_date": "2023-12-13"
+    },
+    "limits": {
+      "max_time_benefit": {
+        "type": "student",
+        "renewal": true,
+        "duration": {
+          "value": 1,
+          "unit": "years"
+        }
+      },
+      "credits": {
+        "type": null,
+        "value": null
       }
     }
   }
