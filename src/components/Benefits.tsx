@@ -16,7 +16,7 @@ const Benefits = () => {
   }, []);
 
   return (
-    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {benefits.map((benefit) => {
         return <BenefitsCardItem benefit={benefit} key={benefit.id} />;
       })}
