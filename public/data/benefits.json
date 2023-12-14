@@ -9,12 +9,7 @@
         "png": "/images/benefits/logo-github.png",
         "webp": "/images/benefits/logo-github.webp"
       },
-      "aliases": [
-        {
-          "alias": "programming",
-          "bg": "#24292E"
-        }
-      ]
+      "aliases": ["programming"]
     },
     "testing": {
       "status": "passed",
@@ -45,16 +40,7 @@
         "png": "/images/benefits/logo-azure.png",
         "webp": "/images/benefits/logo-azure.webp"
       },
-      "aliases": [
-        {
-          "alias": "cloud",
-          "bg": "#0078D4"
-        },
-        {
-          "alias": "programming",
-          "bg": "#24292E"
-        }
-      ]
+      "aliases": ["cloud", "programming"]
     },
     "testing": {
       "status": "passed",
@@ -85,12 +71,7 @@
         "png": "/images/benefits/logo-microsoft.png",
         "webp": "/images/benefits/logo-microsoft.webp"
       },
-      "aliases": [
-        {
-          "alias": "office",
-          "bg": "#D83B01"
-        }
-      ]
+      "aliases": ["office"]
     },
     "testing": {
       "status": "passed",
@@ -121,12 +102,7 @@
         "png": "/images/benefits/logo-figma.png",
         "webp": "/images/benefits/logo-figma.webp"
       },
-      "aliases": [
-        {
-          "alias": "design",
-          "bg": "#F24E1E"
-        }
-      ]
+      "aliases": ["design"]
     },
     "testing": {
       "status": "passed",
@@ -157,12 +133,7 @@
         "png": "/images/benefits/logo-miro.png",
         "webp": "/images/benefits/logo-miro.webp"
       },
-      "aliases": [
-        {
-          "alias": "design",
-          "bg": "#F24E1E"
-        }
-      ]
+      "aliases": ["design"]
     },
     "testing": {
       "status": "passed",

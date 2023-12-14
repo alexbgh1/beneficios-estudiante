@@ -2,15 +2,11 @@ type Tested = "passed" | "not-passed" | "unknown";
 type BenefitLimitMaxTimeType = "student" | "fixed" | "unknown" | null;
 type BenefitLimitCreditsType = "hours" | "credits" | "unknown" | null;
 type DurationUnit = "days" | "months" | "years";
+type BenefitDetailsAliases = "programming" | "design" | "cloud" | "office" | "other";
 
 interface BenefitDetailsLogo {
   png: string;
   webp: string;
-}
-
-interface BenefitDetailsAliases {
-  alias: string;
-  bg_color: string;
 }
 
 // Estado de la prueba del beneficio, si sigue o no disponible el beneficio
