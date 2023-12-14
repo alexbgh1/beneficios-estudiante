@@ -1,12 +1,6 @@
-// Components
-import {
-  ThemeSunIcon,
-  ThemeMoonIcon,
-  ThemeSnowflakeIcon,
-  ThemeSleighIcon,
-  ThemeDefaultIcon,
-} from "../components/icons";
-const themes = [
+import { Theme } from "../types/theme.d.type";
+
+const themes: Theme[] = [
   {
     id: 1,
     name: "Coffee",
@@ -27,24 +21,16 @@ const themes = [
     name: "Winter",
     value: "winter",
   },
-  // {
-  //   id: 4,
-  //   name: "Christmas",
-  //   value: "christmas",
-  // },
+  {
+    id: 4,
+    name: "Christmas",
+    value: "christmas",
+  },
+  {
+    id: 5,
+    name: "Halloween",
+    value: "halloween",
+  },
 ];
 
-// Mapeo entre los valores de los temas y los componentes de iconos
-const themeIcons: { [key: string]: JSX.Element } = {
-  light: <ThemeSunIcon className={`h-6 w-6 inline-block`} />,
-  cofee: <ThemeSunIcon className={`h-6 w-6 inline-block`} />,
-  dark: <ThemeMoonIcon className={`h-6 w-6 inline-block`} />,
-  winter: <ThemeSnowflakeIcon className={`h-6 w-6 inline-block`} />,
-  christmas: <ThemeSleighIcon className={`h-6 w-6 inline-block`} />,
-};
-
-const themeIconsWithDefault = (key: string): JSX.Element => {
-  return themeIcons[key] || <ThemeDefaultIcon className={`h-6 w-6 inline-block`} />;
-};
-
-export { themes, themeIconsWithDefault, themeIcons };
+export { themes };

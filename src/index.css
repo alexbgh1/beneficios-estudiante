@@ -37,6 +37,15 @@
     --text-title: 37 37 37;
   }
 
+  html[data-theme="halloween"] {
+    --color-primary: 69 25 82;
+    --color-secondary: 102 37 73;
+    --color-third: 174 68 90;
+    --color-accent: 243 159 90;
+    --text-primary: 255 255 255;
+    --text-title: 37 37 37;
+  }
+
   html[data-theme="christmas"] {
     --color-primary: 194 16 16;
     --color-secondary: 230 72 72;
