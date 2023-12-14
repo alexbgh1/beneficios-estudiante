@@ -8,18 +8,20 @@ import {
   ThemeSnowflakeIcon,
   ThemeSleighIcon,
   ThemeMugHotIcon,
+  ThemeGhostIcon,
   ThemeDefaultIcon,
-} from "../components/icons";
+} from "../components/icons/ThemeIcons";
 
 const activeTheme = (themeValue: string): string =>
   themes.find((theme) => theme.value === themeValue)?.value || "coffee";
 
 // Mapeo entre los valores de los temas y los componentes de iconos
+// Información debe verificarse con lo que se encuentra en src/constants/themes.tsx
 const themeIcons: { [key: string]: JSX.Element } = {
   light: <ThemeSunIcon className={`h-6 w-6 inline-block`} />,
   coffee: <ThemeMugHotIcon className={`h-6 w-6 inline-block`} />,
   dark: <ThemeMoonIcon className={`h-6 w-6 inline-block`} />,
-  halloween: <ThemeSunIcon className={`h-6 w-6 inline-block`} />,
+  halloween: <ThemeGhostIcon className={`h-6 w-6 inline-block`} />,
   winter: <ThemeSnowflakeIcon className={`h-6 w-6 inline-block`} />,
   christmas: <ThemeSleighIcon className={`h-6 w-6 inline-block`} />,
 };

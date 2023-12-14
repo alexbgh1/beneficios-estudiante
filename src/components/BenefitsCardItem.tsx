@@ -41,9 +41,9 @@ const BenefitsCardItemHeader = ({ name, details }: { name: string; details: Bene
               className="aspect-square place-self-center mb-1 w-10 h-10"
             />
           </picture>
-          <h3 className="ml-2 w-4/5 text-xl sm:text-2xl font-bold text-gray-800 line-clamp-2">{name}</h3>
+          <h3 className="ml-2 w-4/5 text-xl sm:text-2xl font-bold text-primary line-clamp-2">{name}</h3>
           <div>
-            <GoToLinkIcon className="w-5 h-5 inline-block ml-1" />
+            <GoToLinkIcon className="w-5 h-5 inline-block ml-1 fill-primary" />
           </div>
         </a>
       </section>
@@ -58,7 +58,7 @@ const BenefitsCardItemBody = ({ details, testing }: { details: BenefitDetails; t
     <section className="px-2 py-2">
       {isTestedIcon && (
         <div className="px-2 pt-2 pb-1 flex flex-row items-center gap-2">
-          <p className="text-xs text-gray-800 font-bold">{testing.last_tested_date}</p>
+          <p className="text-xs text-primary font-bold">{testing.last_tested_date}</p>
           <span
             className="block rounded-full transition-all duration-300"
             title={`${testing.status.toUpperCase()} | Última actualización: ${testing.last_tested_date}`}
@@ -67,28 +67,28 @@ const BenefitsCardItemBody = ({ details, testing }: { details: BenefitDetails; t
           </span>
         </div>
       )}
-      <p className="px-2 text-sm text-gray-800">{details.description}</p>
+      <p className="px-2 text-sm text-primary">{details.description}</p>
     </section>
   );
 };
 
 const BenefitsCardItemFooter = ({ limits }: { limits: BenefitLimits }) => {
   const { max_time_benefit } = limits;
-  const limitsIcon = resolveLimitsIcon(max_time_benefit.type, "w-5 h-5 fill-gray-500");
-  const renewalIcon = resolveRenewalIcon(max_time_benefit.renewal, "ml-2 w-5 h-5 fill-gray-500");
+  const limitsIcon = resolveLimitsIcon(max_time_benefit.type, "w-5 h-5 fill-primary");
+  const renewalIcon = resolveRenewalIcon(max_time_benefit.renewal, "ml-2 w-5 h-5 fill-primary");
 
   return (
     <footer className="flex justify-between px-2 py-2">
       <section>
-        <h4 className="px-2 text-sm font-bold text-gray-800">Límites</h4>
+        <h4 className="px-2 text-sm font-bold text-primary">Límites</h4>
         <ul className="flex flex-row justify-between px-2 py-2">
           <li className="flex items-center gap-2">
             {limitsIcon}
-            <span className="text-xs text-gray-800 capitalize">{max_time_benefit.type}</span>
+            <span className="text-xs text-primary capitalize">{max_time_benefit.type}</span>
             {/* #060505 */}
             {/* Renewal: boolean */}
             {max_time_benefit.renewal && renewalIcon}
-            <span className="text-xs text-gray-800 capitalize">
+            <span className="text-xs text-primary capitalize">
               {max_time_benefit.duration.value}{" "}
               {resolveTimeNumberDate(max_time_benefit.duration.value, max_time_benefit.duration.unit)}
             </span>
@@ -98,12 +98,12 @@ const BenefitsCardItemFooter = ({ limits }: { limits: BenefitLimits }) => {
       {/* // TODO: Credits */}
       <section>
         {limits.credits.type && (
-          <h4 className="capitalize px-2 text-sm font-bold text-gray-800">{limits.credits.type}</h4>
+          <h4 className="capitalize px-2 text-sm font-bold text-primary">{limits.credits.type}</h4>
         )}
         <ul className="flex flex-row justify-between px-2 py-2">
           {limits.credits.type && (
             <li className="flex flex-col items-center gap-2">
-              <span className="text-sm text-gray-800">${limits.credits.value}</span>
+              <span className="text-sm text-primary">${limits.credits.value}</span>
             </li>
           )}
         </ul>

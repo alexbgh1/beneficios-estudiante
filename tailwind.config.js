@@ -13,6 +13,9 @@ export default {
         primary: "rgb(var(--text-primary) / <alpha-value>)",
         title: "rgb(var(--text-title) / <alpha-value>)",
       },
+      fill: {
+        primary: "rgb(var(--text-primary) / <alpha-value>)",
+      },
       dropShadow: {
         // drop-shadow-[15px_-10px_0px_rgb(255,0,1)]
         primary: "10px -7px 0px rgb(var(--color-accent))",
