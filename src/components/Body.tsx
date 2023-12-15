@@ -1,3 +1,4 @@
+import { FilterFunction } from "../types/filter.d.type";
 // Components
 import Hero from "./Hero";
 import Benefits from "./Benefits";
@@ -5,7 +6,11 @@ import Filters from "./Filters";
 import { useFilters } from "../hooks/usefilters";
 
 const Body = () => {
-  const { filteredBenefits, handleFilter } = useFilters();
+  const {
+    filteredBenefits,
+    handleFilter,
+  }: { filteredBenefits: FilterFunction; handleFilter: (event: React.ChangeEvent<HTMLInputElement>) => void } =
+    useFilters();
   return (
     <>
       <Hero />

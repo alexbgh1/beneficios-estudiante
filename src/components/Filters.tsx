@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SearchIcon } from "./icons";
 
-const Filters = ({ handleFilter }) => {
+const Filters = ({ handleFilter }: { handleFilter: (event: React.ChangeEvent<HTMLInputElement>) => void }) => {
   const [focus, setFocus] = useState(false);
 
   const handleFocus = () => {

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 // Types
 import { Benefit } from "../types/benefit.d.type";
+import { FilterFunction } from "../types/filter.d.type";
 // Components
 import BenefitsCardItem from "./BenefitsCard/BenefitCardItem";
 
-const Benefits = ({ filteredBenefits }) => {
+const Benefits = ({ filteredBenefits }: { filteredBenefits: FilterFunction }) => {
   const [benefits, setBenefits] = useState<Benefit[]>([]);
   useEffect(() => {
     const fetchBenefits = async () => {
