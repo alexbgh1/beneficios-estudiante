@@ -3,10 +3,13 @@ import SwitchLightDark from "./theme/SwitchTheme";
 import { GithubIcon } from "../components/icons";
 const Nav = () => {
   return (
-    <header className="px-8 py-4 flex justify-between items-center h-14 bg-secondary text-white relative shadow-md">
-      <NavLeft />
-      <NavRight />
-    </header>
+    // Wrapper -> To avoid empty space when the nav is fixed
+    <div data-id="wrapper-nav" className="w-full h-14">
+      <header className="z-10 w-full fixed px-8 py-4 flex justify-between items-center h-14 bg-secondary text-white  shadow-md">
+        <NavLeft />
+        <NavRight />
+      </header>
+    </div>
   );
 };
 

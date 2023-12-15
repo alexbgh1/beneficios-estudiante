@@ -7,4 +7,6 @@ const validAlias: { [key: string]: string } = {
   default: "#fff",
 };
 
-export { validAlias };
+const validAliasAsArray: string[] = Object.keys(validAlias);
+
+export { validAlias, validAliasAsArray };
