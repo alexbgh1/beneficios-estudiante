@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 // Types
 import { Benefit } from "../types/benefit.d.type";
 // Components
-import BenefitsCardItem from "./BenefitsCardItem";
+import BenefitsCardItem from "./BenefitsCard/BenefitCardItem";
 
 const Benefits = () => {
   const [benefits, setBenefits] = useState<Benefit[]>([]);
