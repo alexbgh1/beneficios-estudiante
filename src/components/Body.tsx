@@ -5,7 +5,7 @@ import { Benefit } from "../types/benefit.d.type";
 import Hero from "./Hero";
 import Benefits from "./Benefits";
 import Filters from "./Filters";
-import { useFilters } from "../hooks/usefilters";
+import { useFilters } from "../hooks/useFilters";
 import { useBenefits } from "../hooks/useBenefits";
 
 const Body = () => {

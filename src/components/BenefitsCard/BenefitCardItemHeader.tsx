@@ -15,10 +15,10 @@ const BenefitCardItemHeader = ({ name, details }: { name: string; details: Benef
           className="flex-1 w-4/5 flex flex-row items-start p-2 pl-2"
         >
           <picture className="aspect-square place-self-center mb-1 w-10 h-10">
-            <source srcSet={details.logo.webp} type="image/webp" />
-            <source srcSet={details.logo.png} type="image/png" />
+            <source srcSet={`${import.meta.env.VITE_API_BASE_PATH}${details.logo.webp}`} type="image/webp" />
+            <source srcSet={`${import.meta.env.VITE_API_BASE_PATH}${details.logo.png}`} type="image/png" />
             <img
-              src="/images/benefits/logo-placeholder.png"
+              src={`${import.meta.env.VITE_API_BASE_PATH}/images/benefits/logo-placeholder.png`}
               alt={name}
               className="aspect-square place-self-center mb-1 w-10 h-10"
             />
