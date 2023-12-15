@@ -12,7 +12,7 @@ const useFilters = () => {
     setFilters(event.target.value.toLowerCase());
   };
 
-  const filteredBenefits: FilterFunction = (benefits: Benefit[]) => {
+  const filterBenefits: FilterFunction = (benefits: Benefit[]) => {
     return benefits.filter((benefit: Benefit) => {
       if (filters === "todos") {
         return true; // No hay filtro, todos los beneficios son visibles
@@ -22,6 +22,6 @@ const useFilters = () => {
     });
   };
 
-  return { filteredBenefits, handleFilter };
+  return { filterBenefits, handleFilter };
 };
 export { useFilters };
