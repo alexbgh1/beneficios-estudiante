@@ -32,6 +32,7 @@ const NavRight = (): JSX.Element => (
       target="_blank"
     >
       <GithubIcon className="fill-accent h-6 w-6 cursor-pointer" />
+      <span className="sr-only">Github repo</span>
     </a>
   </section>
 );

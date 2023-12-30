@@ -19,7 +19,7 @@ const BenefitCardItemHeader = ({ name, details }: { name: string; details: Benef
             <source srcSet={`${import.meta.env.VITE_API_BASE_PATH}${details.logo.png}`} type="image/png" />
             <img
               src={`${import.meta.env.VITE_API_BASE_PATH}/images/benefits/logo-placeholder.png`}
-              alt={name}
+              alt={`Empresa que ofrece beneficios estudiantiles ${name}`}
               className="aspect-square place-self-center mb-1 w-10 h-10"
             />
           </picture>

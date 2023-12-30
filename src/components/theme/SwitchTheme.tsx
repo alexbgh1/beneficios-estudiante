@@ -21,6 +21,7 @@ const SwitchTheme = () => {
         className="block p-1.5 rounded-full hover:bg-accent/25 transition duration-150 ease-in-out"
       >
         {getThemeIcon(currentActiveTheme, { className: "h-6 w-6 inline-block fill-accent" })}
+        <span className="sr-only">Switch Theme</span>
       </button>
       <SwitchMenu menu={menu} handleChangeTheme={handleChangeTheme} currentActiveTheme={currentActiveTheme} />
     </div>

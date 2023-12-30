@@ -1,14 +1,12 @@
 import { useState } from "react";
 // Types
 import { Benefit } from "../types/benefit.d.type";
-import { FilterFunction } from "../types/filter.d.type";
+import { FilterFunction, HandleFilter } from "../types/filter.d.type";
 
 const useFilters = () => {
-  const [filters, setFilters] = useState("todos");
+  const [filters, setFilters] = useState<string>("todos");
 
-  const handleFilter: (event: React.ChangeEvent<HTMLInputElement>) => void = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleFilter: HandleFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFilters(event.target.value.toLowerCase());
   };
 
