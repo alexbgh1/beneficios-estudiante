@@ -3,19 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  /* #f0e0c480 */
   html[data-theme="coffee"] {
     --color-primary: 243 238 234;
     --color-secondary: 235 227 213;
-    --color-third: 176 166 149;
+    --color-third: 235 227 213;
     --color-accent: 119 107 93;
     --text-title: 37 37 37;
     --text-primary: 46 36 29;
   }
 
   html[data-theme="winter"] {
-    --color-primary: 22 72 99;
+    --color-primary: 21 83 117;
     --color-secondary: 66 125 157;
-    --color-third: 155 190 200;
+    --color-card: 66 125 157;
     --color-accent: 221 242 253;
     --text-title: 255 255 255;
     --text-primary: 240 246 249;
@@ -24,7 +25,7 @@
   html[data-theme="halloween"] {
     --color-primary: 69 25 82;
     --color-secondary: 102 37 73;
-    --color-third: 164 88 90;
+    --color-card: 102 37 73;
     --color-accent: 243 159 90;
     --text-title: 255 255 255;
     --text-primary: 254 227 206;
@@ -33,7 +34,7 @@
   html[data-theme="christmas"] {
     --color-primary: 194 16 16;
     --color-secondary: 230 72 72;
-    --color-third: 255 253 227;
+    --color-card: 255 253 227;
     --color-accent: 207 232 169;
     --text-title: 255 255 255;
     --text-primary: 31 41 55;
@@ -42,7 +43,7 @@
   html[data-theme="light"] {
     --color-primary: 249 249 249;
     --color-secondary: 235 235 235;
-    --color-third: 240 240 240;
+    --color-card: 240 240 240;
     --color-accent: 19 19 19;
     --text-title: 37 37 37;
     --text-primary: 52 52 52;
@@ -51,7 +52,7 @@
   html[data-theme="dark"] {
     --color-primary: 21 0 80;
     --color-secondary: 6 0 37;
-    --color-third: 13 0 33;
+    --color-card: 13 0 33;
     --color-accent: 212 173 253;
     --text-title: 128 128 128;
     --text-primary: 226 226 234;

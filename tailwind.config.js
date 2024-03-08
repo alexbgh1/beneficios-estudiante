@@ -6,7 +6,7 @@ export default {
       colors: {
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         secondary: "rgb(var(--color-secondary) / <alpha-value>)",
-        third: "rgb(var(--color-third) / <alpha-value>)",
+        card: "rgb(var(--color-card) / <alpha-value>)",
         accent: "rgb(var(--color-accent) / <alpha-value>)",
       },
       textColor: {
