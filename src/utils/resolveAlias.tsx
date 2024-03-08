@@ -1,8 +1,9 @@
+import { Hex } from "../types/color.d.type";
 import { validAlias } from "../constants/aliases";
 
 interface AliasColor {
   alias: string;
-  bgColor: string;
+  bgColor: Hex;
 }
 
 const findAliasColor = (alias: string): AliasColor => {
