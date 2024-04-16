@@ -1,6 +1,3 @@
-// Types
-import { FilterFunction, HandleFilter } from "../types/filter.d.type";
-import { Benefit } from "../types/benefit.d.type";
 // Components
 import Hero from "./Hero";
 import Benefits from "./Benefits";
@@ -9,8 +6,8 @@ import { useFilters } from "../hooks/useFilters";
 import { useBenefits } from "../hooks/useBenefits";
 
 const Body: React.FC = () => {
-  const { filterBenefits, handleFilter }: { filterBenefits: FilterFunction; handleFilter: HandleFilter } = useFilters();
-  const { benefits }: { benefits: Benefit[] } = useBenefits();
+  const { filterBenefits, handleFilter } = useFilters();
+  const { benefits } = useBenefits();
 
   const filteredBenefits = filterBenefits(benefits);
 
@@ -18,11 +15,12 @@ const Body: React.FC = () => {
     <>
       <Hero />
       <main className="flex-1 justify-start pb-8 border-t-[1px] border-accent bg-primary w-full min-w-full container flex flex-col items-center">
-        <h2 className="mt-8 text-3xl sm:text-4xl font-bold text-center text-primary">Empresas asociadas</h2>
+        <h2 className="mt-8 text-3xl font-bold text-center sm:text-4xl text-primary">Empresas asociadas</h2>
         <Filters handleFilter={handleFilter} />
         <p className="mt-0 mb-1 text-center text-primary/60">{filteredBenefits.length} beneficios encontrados</p>
         <Benefits benefits={filteredBenefits} />
       </main>
+      <div className="h-[150px] bg-primary"></div>
     </>
   );
 };
